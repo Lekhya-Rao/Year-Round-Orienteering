@@ -3,20 +3,21 @@ LAB-1:YEAR-ROUND
 ORIENTEERING
 LEKHYA RAO MUMMAREDDY
 The solution to the given problem uses the following methods:
-1.Functions to process the input files:
+
+Markup: 1.Functions to process the input files:
 These functions take as input the filename and create a list containg the
 information in the file.
- For the elevation path, a list elevations is created which reads the file and
+-  For the elevation path, a list elevations is created which reads the file and
 stores the elevations as float values according to the coordinates of each
 pixel.
- For the image file, a reference to the image is created, which is then used to
+-  For the image file, a reference to the image is created, which is then used to
 perform any required operations on the image, like save(),show() etc.For
 this, the Python Image Library is used. After processing the image, a list
 pixels is created consisting of the RGB values of pixels in the image
 according to their coordinates.
- For the path file, a list path is created, which consists of all the controls to
+- For the path file, a list path is created, which consists of all the controls to
 be visited in their respective order.
-2.Speed:
+Markup: 2.Speed:
 Inorder to take into consideration the ability to be able to traverse through
 different terrains, a dictionary terrain_speeds is created, which maps the different
 terrains with an appropriate speed.
