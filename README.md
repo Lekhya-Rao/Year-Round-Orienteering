@@ -1,10 +1,8 @@
 # Year-Round-Orienteering
-LAB-1:YEAR-ROUND
-ORIENTEERING
-LEKHYA RAO MUMMAREDDY
+### LEKHYA RAO MUMMAREDDY ###
 The solution to the given problem uses the following methods:
 
-Markup: 1.Functions to process the input files:
+1. ***Functions to process the input files:***
 These functions take as input the filename and create a list containg the
 information in the file.
 -  For the elevation path, a list elevations is created which reads the file and
@@ -17,7 +15,7 @@ pixels is created consisting of the RGB values of pixels in the image
 according to their coordinates.
 - For the path file, a list path is created, which consists of all the controls to
 be visited in their respective order.
-Markup: 2.Speed:
+2. ***Speed:***
 Inorder to take into consideration the ability to be able to traverse through
 different terrains, a dictionary terrain_speeds is created, which maps the different
 terrains with an appropriate speed.
@@ -25,7 +23,7 @@ The speeds are assigned in the following order:
 Open Land (100) > Easy movement forest (90) > Footpath (80) > Slow run forest,
 Paved road (70) > Walk forest (60) > Rough Meadow (50) > Lake, swamp or
 marsh (0.1) > Impassible vegetation (0.01) > Out of bounds (0.001)
-3.Pixel representation:
+3. ***Pixel representation:***
 In order to efficiently represent the pixels and their respective information, a class
 node is used. The members of the node are:
 x - x coordinate
@@ -61,7 +59,7 @@ this cost function is effective because the heuristic fuction is admissible, imp
 the performance of the A* algorithm and also by considering time taken to travel,
 we use the information about the different terrains and the possible speed in
 them. Which helps us choose the best optimal path between two points.
-3. A* Search Algorithm:
+4. ***A* Search Algorithm:***
 Given two points the A* algorithm find the best possible path between them by
 choosing an efficient cost for each possible step.
 The algorithm is implemented in the following manner:
@@ -81,13 +79,13 @@ current neighbor, the existing node is replaced with the current neighbor in
 frontier.
 - If the neighbor does not exist in both frontier and explored, it means the
 neighbor has not been visited yet. It is then added to the frontier .
-4. Solution:
+5. ***Solution:***
 In order to trace the path of a given node, this method traverses through the
 node's coordinates to the root parent's coordinated and returns the list of
 coordinates from parent to child.
 This method also returns the distance of the given node, which represents the
 total distance travelled till current node.
-5.Output Image:
+6. ***Output Image:***
 Once all the points in the the path file are travered through, the trace of path
 between every two consecutive points in path file is stored in a list which is given
 as input along with the input image filename and output image filename to the
@@ -95,7 +93,7 @@ function imageOutput . This method goes through the trace of path travelled and
 changes the color of every pixel in the path in the image file and stores it in the
 output filename provided and displays this image.
 The total distance travelled is also reflected on the terminal.
-6.Seasons:
+7. ***Seasons:***
 i. Summer: the images provided are taken in summer, hence the algorithm
 remains accurate for summer without any changes.
 ii. Fall: in this season, the leaves fall and the paths through the woods become
